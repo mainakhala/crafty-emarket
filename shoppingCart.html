@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset=utf-8 />
+    <title>Crafty eMarket - Shopping Cart</title>
+    <link rel="stylesheet" type="text/css" href="_css/CSS_Main.css">
+    <link href="https://fonts.googleapis.com/css?family=Yatra+One" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+    <!--  JQuery UI CSS -->
+    <link href="_css/jquery-ui.min.css" rel="stylesheet">
+    <script src ="_js/jquery-ui.min.js" > </script>
+    <script src="_js/jquery.validate.min.js"></script>
+
+</head>
+
+<body>
+         <div id="stripe-message">
+             <a href="#foo">Today only free gift with purchase over $50!</a>
+             <a href="#foo">Orders over $50 Ships for free!</a>
+             <p></p><!--currency?-->
+         </div>
+        
+    <header>
+
+        <div id="topHead">
+         <a href="index.html"><img class="logo" src="_images/logo.gif" alt="logo"/></a>
+            <div id = "top2">
+                <input type="text" id="search" placeholder="Search..">
+                <a id = "sell" href="#foo">Sell Crafts</a>
+                <div id="loginA" ><a href="#foo"><img src="_images/login.png" alt="login"/> Hey, Sign in </a></div>
+                <a href="shoppingCart.html"><img class="sCart" src="_images/cart.png" alt="logo"/></a>
+            </div>
+        </div>
+        <!-- navigation -->
+        <nav>
+            <ul id="navUl">
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="categories.html">Categories</a>
+                        <ul>
+                            <li><a href="#foo">Home and Decor</a>
+                                <ul> 
+                                    <li><a href="#foo">Decorative Objects & Figurine</a></li>
+                                    <li><a href="#foo">Candle Holders</a></li>
+                                    <li><a href="#foo">Vases</a></li>
+                                    <li><a href="#foo">Wall Art</a></li>
+                                    <li><a href="#foo">Sculpture</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="#foo">Jewelry</a>
+                                <ul> 
+                                    <li><a href="#foo">Earrings</a></li>
+                                    <li><a href="#foo">Key Chain</a></li>
+                                    <li><a href="#foo">Bracelets</a></li>
+                                    <li><a href="#foo">necklaces</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="#foo">Tiles</a>
+                                <ul> 
+                                    <li><a href="#foo">Kitchen Tiles</a></li>
+                                    <li><a href="#foo">Bathroom Tiles</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="#foo">Dinnerware</a>
+                                <ul> 
+                                    <li><a href="#foo">Plates and Bowls</a></li>
+                                    <li><a href="#foo">Trays</a></li>
+                                    <li><a href="#foo">Cups and Mugs</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                <li><a href="#foo">Customize</a></li>
+
+                <li><a href="#foo">Gift Registry</a></li><!--gift picture-->
+            </ul>
+     </nav>
+    </header>
+
+    <main class="mainIndex">
+
+        <div class="shoppingCart">
+
+            <h1>YOUR SHOPPING CART</h1>
+
+            <form method="post" id="cartform">
+
+                <!-- cart items -->
+                <table>
+                    <tr id="shopCart">
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Qty</th>
+                        <th>Remove</th>
+                    </tr>
+
+                    <tr class="item">
+                        <td>
+                            <div class="cartItem">
+                                <div class="cartItemImg">
+                                    <img>
+                                </div>
+                                <div class="cartItemName">
+                                    <p>Neclace</p>
+                                </div>
+                            </div>
+                        </td>
+
+                        <td>
+                            <p class="cartItemPrice">$99.00</p>          
+                        </td> 
+
+                        <td>
+                            <div class="quantities" style="align-items:center; margin: 0px; padding: 0px">
+                                <button class="minus-btn" type="button" name="button" style="width:30px; height:25px">-</button>
+                                <input class="P-MBtn" min="1" type="text" name="quantity" id="prodQt" value="1" style="width:30px; height:25px">
+                                <button class="plus-btn" type="button" name="button" style="width:30px; height:25px">+</button>
+                            </div>
+                        </td> 
+                        
+                        <td><img src= "_images/delete.png" alt="Remove Item" style="height: 30px;"></td>
+                    </tr>  
+
+                    <tr class="item">
+                            <td>
+                                <div class="cartItem">
+                                    <div class="cartItemImg">
+                                        <img>
+                                    </div>
+                                    <div class="cartItemName">
+                                        <p>Neclace</p>
+                                    </div>
+                                </div>
+                            </td>
+    
+                            <td>
+                                <p class="cartItemPrice">$99.00</p>          
+                            </td> 
+    
+                            <td>
+                                <div class="quantities">
+                                    <button class="minus-btn" type="button" name="button" style="width:30px; height:25px">-</button>
+                                    <input class="P-MBtn" min="1" type="text" name="quantity" id="prodQt" value="1" style="width:30px; height:25px">
+                                    <button class="plus-btn" type="button" name="button" style="width:30px; height:25px">+</button>
+                                </div>
+                            </td> 
+                            
+                            <td><img src= "_images/delete.png" alt="Remove Item" style="height: 30px;"></td>
+                    </tr>  
+                </table>
+
+                <div class="flexRow">
+                    <!-- Discount Code -->
+                    <div id="dCode" Style="width:60%">
+                        <label for="">Discount Code</label>
+                        <input type="text">
+                        <button type="submit">Add Code</button>
+                    </div>
+    
+                    <div id="TotalDiv" Style="width:40%">
+                        <p>YOUR ORDER</p>
+                        <p style="text-indent: 50px;">SUBTOTAL</p>
+                        <p style="text-indent: 50px;">SHIPPING</p>
+                        <p style="text-indent: 50px;">TAX</p>
+                        <p style="text-indent: 50px;">GRAND TOTAL</p>
+                    </div>
+                </div> <!-- end flexRow -->
+            
+                 <!-- payment and shipment info div -->
+               
+                <!-- shipping info -->
+                <div class="form">
+                    <fieldset>
+                        <legend>Shipping Information</legend>
+
+                        <div>
+                            <label for="name" class="label">Full Name:</label>
+                            <input name="name" type="text" class="name">
+                        </div>
+
+                        <div>
+                            <label for="email" class="label">Email Address:</label>
+                            <input name="email" type="text" class="email">
+                        </div>
+
+                        <div>
+                            <label for="phone" class="label">Contact Number:</label>
+                            <input name="phone" type="text" class="phone">
+                        </div>
+
+                        <div>
+                            <label for="address" class="label">Address</label>
+                            <input name="address" type="text" class="address">
+                        </div>
+
+                        <div>
+                            <label for="city" class="label">City</label>
+                            <input name="city" type="text" class="city" >
+                        </div>
+                        
+                        
+                            <div class="state-zip-combo">
+                                <label for="state" class="label">State/Province</label>
+                                <select name="state" class="state">
+                                    <option>State</option>
+                                </select>
+
+                                <div class="zipcode">
+                                    <label for="zip" class="label">Postal Code</label>
+                                    <input name="zip" type="text" class="zip">
+                                </div>
+                            </div>
+                    </fieldset>
+                </div> <!-- end shipping info -->
+
+                <!-- Billing info -->
+                <div>  
+                    <fieldset>
+                        <legend>Payment Information</legend>
+                        <input type="checkbox" id="shipAdd" value=""> Same as shipping Address<br>
+        
+                        <!-- Billing Address -->
+                        
+                            <fieldset>
+                                <legend>Billing Address</legend>
+
+                                <div id="bAdd">
+                                <label for="name" class="label">Full Name:</label>
+                                <input name="name" type="text" id="name">
+    
+                                <label for="email" class="label">Email Address:</label>
+                                <input name="email" type="text" id="email">
+    
+                                <label for="phone" class="label">Contact Number:</label>
+                                <input name="phone" type="text" id="phone">
+                   
+                                    <div class="flexRow" >
+                                <label for="address" class="label">Address</label>
+                                <input name="address" type="text" id="address">
+                                            
+                                <label for="city" class="label">City</label>
+                                <input name="city" type="text" id="city" >
+                                    </div><!-- end flexRow -->
+
+                                    <div class="flexRow" >
+                                <label for="state" class="label">State/Province</label>
+                                <select name="state" id="state">
+                                    <option>Choose your State </option>
+                                        </select>
+                                            
+                                <label for="zip" class="label">Postal Code</label>
+                                <input name="zip" type="text" id="zip">
+                                    </div><!-- end flexRow -->
+                                </div> <!-- end div bAdd -->
+                            </fieldset>
+
+                            <!-- payment method -->
+                            <div>
+                                <legend>Payment Method</legend>
+                                <input type="radio" name="payment" id="paypal" value="paypal">
+                                <label for="paypal">PayPal</label>
+
+                                <input type="radio" name="payment" id="Card" value="Card">
+                                <label for="Card">Card</label>
+
+                                <input type="radio" name="payment" id="applePay" value="applePay">
+                                <label for="applePay">Apple Pay</label>
+
+                                <!-- if credit card selected -->
+                                <div id="creditCard" class="indent">
+                                        <label for="cardHolder" class="label">Card Holder</label>
+                                        <input type="text" name="cardHolder" id="cardHolder"><br>
+
+                                        <label for="cardNumber" class="label">Card Number</label>
+                                        <input type="text" name="cardNumber" id="cardNumber">
+                                        <label for="cvv" class="label">CVV</label>
+                                        <input type="text" name="cvv" id="cvv"><br>
+                                    
+                                        <label for="expiration" class="label">Expiration Date</label>
+                                        <input type="text" name="expiration" id="expiration">
+                                </div> 
+                            </div><!-- end payment method -->
+                    </fieldset>
+                </div><!-- end Billing info -->
+                 
+               
+
+                <div class="checkout-button">
+                    <button name="checkout" id="checkout">Checkout</button>
+                </div>
+            </form>
+
+            <!-- Dialog your order sumitted successfuly -->
+        
+        </div> <!-- end shoppingCart -->
+        
+    </main>
+
+    
+    <!-- Footer part Starts here -->
+    <footer> 
+
+        <div id = "footTop">
+            <div id="footerLinks">
+                <a href="contactus.html">About Crafty eMarket</a>
+                <a href="#foo">Our Stores</a>
+                <a href="contactus.html">Contact us</a>
+                <a href="#foo">Shipping & Delivery</a>
+                <a href="#foo">Returns & Exchanges</a>
+                <a href="#foo">Privacy & Policy</a>
+                <a href="#foo">Other FAQs</a>
+            </div>
+
+            <div id= "regFormDiv">
+                <form id = "regForm" action="post">
+                    <h3>Lets Keep in Touch</h3>
+                    <input id="regName" type="text" placeholder="Name">
+                    <input id="regEmail" type="text" placeholder="Email Address">
+                    <button style="background-color: #D17C7B;" type="submit">Submit</button>
+                    <p>Sign up to reveive our newsletter and exclusive sales and special promotions.</p>
+                    <p>You can unsubscribe any time.</p>
+                    <p> Click here to view our Privacy Policy.</p>
+                </form>
+                <div class="sMedia">
+                    <a href="#foo"> <img src="_images/fbIcon.png" alt="Facebook"> </a>
+                    <a href="#foo"> <img src="_images/twitIcon.png" alt="Twitter"> </a>
+                    <a href="#foo"> <img src="_images/insIcon.png" alt="Instagram"></a>
+                </div><!--end div sMedia-->  
+            </div> <!--end div regFormDiv-->  
+
+        </div><!--end div footTop-->  
+
+        <div id="footerB">
+            <p>© Copyright 2018 Crafty eMarket</p>
+            <div class="payMethod">
+                <img src="_images/visa.png" alt="Visa Card">
+                <img src="_images/mastercard.png" alt="Master Card">
+                <img src="_images/paypal.png" alt="Pay Pal">
+                <img src="_images/applepay.png" alt="Apple Pay">
+                <img src="_images/american-express.png" alt="American Express"> 
+            </div>
+        </div>   <!--end div footerB-->    
+    </footer>
+
+    <script src="_js/mainScript.js"> </script>   
+</body>
+</html>

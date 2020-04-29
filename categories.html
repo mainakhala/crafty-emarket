@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset=utf-8 />
+    <title>Crafty eMarket - Shopping Cart</title>
+    <link rel="stylesheet" type="text/css" href="_css/CSS_Main.css">
+    <link href="https://fonts.googleapis.com/css?family=Yatra+One" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+    <!--  JQuery UI CSS -->
+    <link href="_css/jquery-ui.min.css" rel="stylesheet">
+    <script src ="_js/jquery-ui.min.js" > </script>
+    <script src="_js/jquery.validate.min.js"></script>
+
+</head>
+
+<body>
+         <div id="stripe-message">
+             <a href="#foo">Today only free gift with purchase over $50!</a>
+             <a href="#foo">Orders over $50 Ships for free!</a>
+             <p></p><!--currency?-->
+         </div>
+        
+    <header>
+
+        <div id="topHead">
+         <a href="index.html"><img class="logo" src="_images/logo.gif" alt="logo"/></a>
+            <div id = "top2">
+                <input type="text" id="search" placeholder="Search..">
+                <a id = "sell" href="#foo">Sell Crafts</a>
+                <div id="loginA" ><a href="#foo"><img src="_images/login.png" alt="login"/> Hey, Sign in </a></div>
+                <a href="shoppingCart.html"><img class="sCart" src="_images/cart.png" alt="logo"/></a>
+            </div>
+        </div>
+        <!-- navigation -->
+        <nav>
+            <ul id="navUl">
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="categories.html">Categories</a>
+                        <ul>
+                            <li><a href="#foo">Home and Decor</a>
+                                <ul> 
+                                    <li><a href="#foo">Decorative Objects & Figurine</a></li>
+                                    <li><a href="#foo">Candle Holders</a></li>
+                                    <li><a href="#foo">Vases</a></li>
+                                    <li><a href="#foo">Wall Art</a></li>
+                                    <li><a href="#foo">Sculpture</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="#foo">Jewelry</a>
+                                <ul> 
+                                    <li><a href="#foo">Earrings</a></li>
+                                    <li><a href="#foo">Key Chain</a></li>
+                                    <li><a href="#foo">Bracelets</a></li>
+                                    <li><a href="#foo">necklaces</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="#foo">Tiles</a>
+                                <ul> 
+                                    <li><a href="#foo">Kitchen Tiles</a></li>
+                                    <li><a href="#foo">Bathroom Tiles</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="#foo">Dinnerware</a>
+                                <ul> 
+                                    <li><a href="#foo">Plates and Bowls</a></li>
+                                    <li><a href="#foo">Trays</a></li>
+                                    <li><a href="#foo">Cups and Mugs</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                <li><a href="#foo">Customize</a></li>
+
+                <li><a href="#foo">Gift Registry</a></li><!--gift picture-->
+            </ul>
+     </nav>
+    </header>
+
+    <main class="mainIndex">
+        <div class="mainP" style ="flex-direction: column;">
+
+            <div class="resultT">
+                    
+                <div>
+                    Sort by: 
+                    <select name="" id="">
+                        <option value="">Featured</option>
+                        <option value="">New Arrival</option>
+                        <option value="">Best Sellers</option>
+                        <option value="">Price Low-High</option>
+                        <option value="">Price High-Low</option>
+                    </select>
+                </div>
+
+                <div>
+                    Filter by Material:
+                    <select name="" id="">
+                            <option value="">Show All</option>
+                            <option value="">Wooden</option>
+                            <option value="">Metal</option>
+                            <option value="">Glass</option>
+                            <option value="">Porcelain</option>
+                            <option value="">Stoneware</option>
+                    </select>
+                </div>
+                    
+            </div><!-- end div resultT -->
+            
+            <div class="productsP">
+                <ul class="productUL">
+                    <li class="itemLi">
+                        <a href="#">
+                            <img src="_images/popular1.jpg" alt="">
+                            <b>Red Vase</b><br>Starting at $39.99
+                        </a>
+                        <button>Quick View</button>
+                    </li>
+                            
+                    <li class="itemLi">
+                        <a href="productInfo.html">
+                            <img src="_images/popular2.jpg" alt="">
+                            <b>Earthenware Bai</b><br>Starting at $9.99
+                        </a>
+                        <button>Quick View</button>
+                    </li>
+                            
+                    <li class="itemLi">
+                        <a href="#">
+                            <img src="_images/popular3.jpg" alt="">
+                            <b>Plant Pot</b><br>Starting at $12.99
+                        </a>
+                        <button>Quick View</button>
+                    </li>
+                            
+                    <li class="itemLi">
+                        <a href="#">
+                            <img src="_images/popular4.jpg" alt="">
+                            <b>Handmade Necklace</b><br>$79.00
+                        </a>
+                        <button>Quick View</button>
+                    </li>
+                </ul>
+            </div> <!--closing tag for productsP-->
+
+            <div class="productsP">
+                <ul class="productUL">
+                    <li class="itemLi">
+                        <a href="#">
+                            <img src="_images/popular5.jpg" alt="">
+                            <b>Colorful Tiles</b><br>$5 /sq. ft
+                        </a>
+                        <button>Quick View</button>
+                    </li>
+                            
+                    <li class="itemLi">
+                        <a href="productInfo.html">
+                            <img src="_images/popular6.jpg" alt="">
+                            <b>Autumn Color<br>Tiles</b><br>$7 /sq. ft
+                        </a>
+                        <button>Quick View</button>
+                    </li>
+                            
+                    <li class="itemLi">
+                        <a href="#">
+                            <img src="_images/popular7.jpg" alt="">
+                            <b>Plant Pot</b><br>$29.00
+                        </a>
+                        <button>Quick View</button>
+                    </li>
+                            
+                    <li class="itemLi">
+                        <a href="#">
+                            <img src="_images/popular8.jpg" alt="">
+                            <b>Necklace</b><br>Starting at $19.99
+                        </a>
+                        <button>Quick View</button>
+                    </li>
+                </ul>
+            </div> <!--closing tag for productsP-->
+
+            <div class="productsP">
+                <ul class="productUL">
+                    <li class="itemLi">
+                        <a href="#">
+                            <img src="_images/popular9.jpg" alt="">
+                            <b>Ceramic Tea pots</b><br>Starting at $19.99
+                        </a>
+                        <button>Quick View</button>
+                    </li>
+                            
+                    <li class="itemLi">
+                        <a href="productInfo.html">
+                            <img src="_images/popular10.jpg" alt="">
+                            <b>Pocket Watch</b><br>Starting at $39.99
+                        </a>
+                        <button>Quick View</button>
+                    </li>
+                            
+                    <li class="itemLi">
+                        <a href="#">
+                            <img src="_images/popular11.jpg" alt="">
+                            <b>Assorted Beads</b><br>Starting at $3.99
+                        </a>
+                        <button>Quick View</button>
+                    </li>
+                            
+                    <li class="itemLi">
+                        <a href="#">
+                            <img src="_images/popular12.jpg" alt="">
+                            <b>Ceramic Decorative <br>Items</b><br>Starting at $7.99
+                        </a>
+                        <button>Quick View</button>
+                    </li>
+                </ul>
+            </div> <!--closing tag for productsP-->
+
+            <button style="margin: auto; margin-bottom: 15px">Show More Results</button>
+            
+        </div> <!--closing tag for mainP-->
+    </main>
+
+    <!-- Footer part Starts here -->
+    <footer> 
+
+        <div id = "footTop">
+            <div id="footerLinks">
+                <a href="contactus.html">About Crafty eMarket</a>
+                <a href="#foo">Our Stores</a>
+                <a href="contactus.html">Contact us</a>
+                <a href="#foo">Shipping & Delivery</a>
+                <a href="#foo">Returns & Exchanges</a>
+                <a href="#foo">Privacy & Policy</a>
+                <a href="#foo">Other FAQs</a>
+            </div>
+
+            <div id= "regFormDiv">
+                <form id = "regForm" action="post">
+                    <h3>Lets Keep in Touch</h3>
+                    <input id="regName" type="text" placeholder="Name">
+                    <input id="regEmail" type="text" placeholder="Email Address">
+                    <button style="background-color: #D17C7B;" type="submit">Submit</button>
+                    <p>Sign up to reveive our newsletter and exclusive sales and special promotions.</p>
+                    <p>You can unsubscribe any time.</p>
+                    <p> Click here to view our Privacy Policy.</p>
+                </form>
+                <div class="sMedia">
+                    <a href="#foo"> <img src="_images/fbIcon.png" alt="Facebook"> </a>
+                    <a href="#foo"> <img src="_images/twitIcon.png" alt="Twitter"> </a>
+                    <a href="#foo"> <img src="_images/insIcon.png" alt="Instagram"></a>
+                </div><!--end div sMedia-->  
+            </div> <!--end div regFormDiv-->  
+
+        </div><!--end div footTop-->  
+
+        <div id="footerB">
+            <p>© Copyright 2018 Crafty eMarket</p>
+            <div class="payMethod">
+                <img src="_images/visa.png" alt="Visa Card">
+                <img src="_images/mastercard.png" alt="Master Card">
+                <img src="_images/paypal.png" alt="Pay Pal">
+                <img src="_images/applepay.png" alt="Apple Pay">
+                <img src="_images/american-express.png" alt="American Express"> 
+            </div>
+        </div>   <!--end div footerB-->    
+    </footer>
+
+    <script src="_js/mainScript.js"> </script>   
+</body>
+</html>
